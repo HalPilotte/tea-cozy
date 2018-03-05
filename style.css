@@ -1,11 +1,10 @@
 body {
-  font-family: Helvetica;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
   font-size: 22px;
   color: seashell;
   background-color: black;
-  opacity: 0.9;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 header {
   display: flex;
@@ -15,22 +14,29 @@ header {
   border-bottom: 1px solid seashell;
   align-items: center;
   color: seashell;
+  z-index: 1;
+  background-color: black;
 }
-.logo{
+div {
+  display: block;
+}
+.flex-container {
   display: flex;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.logo img {
+header img {
   height: 50px;
   margin-left: 10px;
 }
-.navigation nav {
-  display: flex;
-  justify-content: space-between;
-  width: 400px;
-  margin-right: 15px;
+nav {
+  text-align: right;
+  flex-grow: 1;
+}
+nav span {
+  display: inline-block;
+  padding: 20px 10px;
 }
 a {
   color: seashell;
@@ -39,27 +45,43 @@ a {
   text-decoration: underline;
 }
 .main {
-  display: flex;
   padding-top: 69px;
-  width: auto;
-  height:700px;
   width: 1200px;
-  justify-content: center;
+  opacity: 0.9;
+  margin: auto;
 }
-#mission.flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+#mission {
+  height: 700px;
   background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-mission-background.jpg);
+  padding-top: 70px;
 }
-.flex-container h2, h4 {
+.flex-container {
   display: flex;
-  background-color: black;
-  width: 1200px;
   justify-content: center;
-  margin: 0;
+  flex: wrap;
 }
-h2 {
-  height: 60px
+#mission .content {
+  margin: auto;
+  background-color: black;
+  width: 100%;
+}
+h2, h3, h4 {
+  margin: 0;
+  padding: 10px;
+}
+#featured-tea {
+  width: 1000px;
+  height: 700px;
+  margin: auto;
+  padding-top: 70px;
+}
+.item {
+  padding: 5px;
+}
+.item img {
+  height: 200px;
+  width: 300px;
+  margin: 10px;
+  display: block;
+  padding-bottom: 10px;
 }
